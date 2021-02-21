@@ -41,7 +41,7 @@ jobs:
         uses: azure/powershell@v1
         with:
           inlineScript: |
-            Import-Module az
+            Get-Module
             hostname
           azPSVersion: '3.1.0'
 
