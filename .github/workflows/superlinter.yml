@@ -32,8 +32,5 @@ jobs:
         with:
             creds: ${{secrets.AZURE_CREDENTIALS}}
             enable-AzPSSession: true
-      
-      - run: |
+        run: |
               Get-AzVM -ResourceGroupName "git_group"
-      
-
