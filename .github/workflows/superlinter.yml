@@ -32,7 +32,10 @@ jobs:
         with:
             creds: ${{secrets.AZURE_CREDENTIALS}}
             enable-AzPSSession: true
-
+      
+      - run: |
+              az webapp list --query "[?state=='Running']"
+      
       - name: Run Azure PowerShell script
         uses: azure/powershell@v1
         with:
