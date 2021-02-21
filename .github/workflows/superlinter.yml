@@ -25,3 +25,9 @@ jobs:
         with:
           inlineScript: "Install-Module Az"
           azPSVersion: latest
+      
+      - name: Run Azure PowerShell script 3
+        uses: Azure/powershell@v1
+        with:
+          inlineScript: "Get-AzResource"
+          azPSVersion: latest
