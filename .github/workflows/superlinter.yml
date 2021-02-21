@@ -16,10 +16,17 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
-
+    
+      - name: check uptime
+        run: uptime
+      
+      - name: check RAM
+        run: free -m
+    
       # Runs the Super-Linter action
       - name: Run Super-Linter2
         uses: github/super-linter@v3
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
